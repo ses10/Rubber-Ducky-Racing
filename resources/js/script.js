@@ -27,20 +27,40 @@ document.getElementById('startButton').addEventListener('click', startRace);
 function startRace()
 {
     
-    for(i = 0; i < ducks.length; i++)
+    //first check if all ducks are not already swimming
+    if( canRace() )
     {
-        
-        changeAnimation(ducks[i], swimAnimation);
-        ducks[i].style.webkitAnimationDuration = randomIntFromRange(2,10).toString() + "s";
+        //Set swim animation each duck along with their respective animation speeds
+        for(i = 0; i < ducks.length; i++)
+        {
+            changeAnimation(ducks[i], swimAnimation);
+            ducks[i].style.webkitAnimationDuration = randomIntFromRange(2,10).toString() + "s";
+        }
     }    
+    //else do nothing
 }
 
 
 /*** FUNCTIONS ***/
 
-//Changes animation of given object
-//@param object - the object we are setting animation on
-//@param animation - string conataining the animation shorthand property
+/*
+ * Checks if ducks can race again depending on all ducks current animations
+ * @returns true if all ducks are not currently in swim animation, false otherwise
+*/
+function canRace()
+{
+    for(i = 0; i < ducks.length; i++)
+    {
+        if(ducks[i].style.webkitAnimationName === "swim")
+            return false;
+    }
+    return true;
+}
+/*
+ * Changes animation of given object
+ * @param object - the object we are setting animation on
+ * @param animation - string conataining the animation shorthand property
+*/
 function changeAnimation(object, animation)
 {
     object.style.webkitAnimation = animation;
