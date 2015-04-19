@@ -1,0 +1,73 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 20, 2015, 5:19:47 PM
+    Author     : Dennis
+*/
+/*Animations*/
+@-webkit-keyframes bobbing1 {
+  50% {
+    top: 60px; }
+  100% {
+    top: 50px; } }
+@-webkit-keyframes bobbing2 {
+  50% {
+    top: 160px; }
+  100% {
+    top: 150px; } }
+@-webkit-keyframes bobbing3 {
+  50% {
+    top: 260px; }
+  100% {
+    top: 250px; } }
+@-webkit-keyframes swim {
+  0% {
+    left: 0px; }
+  100% {
+    left: 950px; } }
+h1 {
+  font-size: 200%;
+  text-align: center;
+  margin-bottom: 5px; }
+
+#race-track {
+  position: relative;
+  margin: 0 auto;
+  height: 350px;
+  width: 1000px;
+  background-color: #6ADAFF;
+  z-index: 0; }
+  #race-track .duck {
+    position: absolute;
+    left: 0px;
+    height: 50px;
+    width: 50px;
+    background-color: #FFFF00; }
+  #race-track #duck-one {
+    top: 50px;
+    -webkit-animation: bobbing1 2s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite; }
+  #race-track #duck-two {
+    top: 150px;
+    -webkit-animation: bobbing2 2s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite; }
+  #race-track #duck-three {
+    top: 250px;
+    -webkit-animation: bobbing3 2s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite; }
+  #race-track #finish-line {
+    position: absolute;
+    left: 825px;
+    z-index: -1; }
+
+button {
+  display: block;
+  margin: 0 auto; }
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,98 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 20, 2015, 5:19:47 PM
+    Author     : Dennis
+*/
+
+$duck-one-position: 50px;
+$duck-two-position: 150px;
+$duck-three-position: 250px;
+
+/*Animations*/
+@-webkit-keyframes bobbing1{
+    
+    50% {top: $duck-one-position + 10;}
+    100% {top: $duck-one-position;}
+}
+
+@-webkit-keyframes bobbing2{
+    
+    50% {top: $duck-two-position + 10;}
+    100% {top: $duck-two-position;}
+}
+
+@-webkit-keyframes bobbing3{
+    
+    50% {top: $duck-three-position + 10;}
+    100% {top: $duck-three-position;}
+}
+@-webkit-keyframes swim{
+    0% {left: 0px;}
+    100% {left: 950px;}
+}
+  
+  
+h1 {
+    font-size: 200%;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#race-track {
+    position: relative;
+    margin: 0 auto;
+    height: 350px;
+    width: 1000px;
+    background-color: #6ADAFF;
+    z-index: 0;
+    
+    
+    .duck {
+        position: absolute;
+        left: 0px;
+        height: 50px;
+        width: 50px;
+        background-color: #FFFF00;
+    }
+    
+    #duck-one {
+        top: $duck-one-position; 
+        -webkit-animation: bobbing1 2s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+        
+    }
+    
+    #duck-two {
+        top: $duck-two-position;
+        -webkit-animation: bobbing2 2s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+         
+    }
+    
+    #duck-three {
+        top: $duck-three-position;
+        -webkit-animation: bobbing3 2s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+        
+    }
+    
+    #finish-line {
+        position: absolute;
+        left: 825px;
+        z-index: -1;
+    }
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+}
+
+
