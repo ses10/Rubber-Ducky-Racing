@@ -31,12 +31,12 @@ function startRace()
     {
         
         changeAnimation(ducks[i], swimAnimation);
-        ducks[0].style.webkitAnimationDuration = randomIntFromRange(2,10).toString() + "s";
+        ducks[i].style.webkitAnimationDuration = randomIntFromRange(2,10).toString() + "s";
     }    
 }
 
 
-/*functions**/
+/*** FUNCTIONS ***/
 
 //Changes animation of given object
 //@param object - the object we are setting animation on
